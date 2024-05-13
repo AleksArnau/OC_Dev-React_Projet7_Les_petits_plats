@@ -1,0 +1,445 @@
+body,
+main {
+  max-width: 1440px;
+}
+main .addedTags .tag:after,
+main .divFilters .dropdownTitle:after {
+  font-family: "Font Awesome 6 Free";
+  margin-left: 40px;
+  font-weight: 900;
+  transition: transform 0.3s;
+}
+.divHeaderInput .inputHeader,
+main .addedTags .tag,
+main .recipeSection .errorMessage,
+main .recipeSection .articleRecipe {
+  font-family: var(--secondary-font-family);
+}
+:root {
+  --primary-color: #ffd15b;
+  --secondary-color: #1b1b1b;
+  --tertiary-color: #ededed;
+  --light-grey: #c6c6c6;
+  --dark-grey: #7a7a7a;
+  --primary-font-family: Anton, Arial, Sans-serif;
+  --secondary-font-family: Manrope, Arial, Sans-serif;
+}
+body {
+  margin: 0 auto;
+  font-family: Anton, Arial, Sans-serif;
+}
+header {
+  background: url("../../assets/site/lampos-aritonang-24gR_9lCdes-unsplash1.png")
+    0 0 / cover;
+  height: 56vw;
+  max-height: 667px;
+  min-height: 380px;
+}
+.logo {
+  height: 25px;
+  width: 207px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+@media (max-width: 768px) {
+  header {
+    height: 36vw;
+  }
+  .logo {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+.headerH1 {
+  font-family: var(--primary-font-family);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 12% auto 0;
+  width: 69%;
+}
+@media (max-width: 925px) {
+  .headerH1 {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .headerH1 {
+    margin-top: 5%;
+    font-size: 2rem;
+  }
+}
+.divHeaderInput {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+  max-width: 994px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.divHeaderInput .inputHeader {
+  width: 100%;
+  height: 72px;
+  border-radius: 11px;
+  border: none;
+  font-size: 22px;
+  padding-left: 20px;
+}
+@media (max-width: 540px) {
+  .divHeaderInput .inputHeader {
+    padding-right: 50px;
+  }
+}
+.divHeaderInput .inputHeader::placeholder {
+  padding-left: 20px;
+  padding-right: 50px;
+}
+.divHeaderInput .fa-stack {
+  position: absolute;
+  right: 20px;
+}
+.divHeaderInput .fa-square {
+  color: #000;
+}
+.divHeaderInput .fa-magnifying-glass {
+  color: #fff;
+}
+main {
+  background: var(--tertiary-color);
+  height: 100%;
+  padding-bottom: 140px;
+}
+main .divFilters {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  gap: 20px;
+  position: absolute;
+}
+main .divFilters .divTags {
+  display: flex;
+  padding: 20px 5px;
+  gap: 55px;
+}
+@media (max-width: 830px) {
+  main .divFilters .divTags {
+    gap: 7vw;
+  }
+}
+@media (max-width: 770px) {
+  main .divFilters .divTags {
+    gap: 5vw;
+  }
+}
+@media (max-width: 720px) {
+  main .divFilters .divTags {
+    gap: 3vw;
+  }
+}
+@media (max-width: 680px) {
+  main .divFilters .divTags {
+    gap: 1vw;
+  }
+}
+main .divFilters .dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  width: 195px;
+  border-radius: 10px;
+  margin: 20px 30px 20px 0;
+  font-family: var(--secondary-font-family);
+  height: fit-content;
+}
+@media (max-width: 830px) {
+  main .divFilters .dropdown {
+    margin: 20px 0;
+  }
+}
+main .divFilters .dropdownTitle {
+  position: relative;
+  display: inline-block;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+main .divFilters .dropdownTitle:after {
+  content: "\f078";
+  display: inline-block;
+}
+main .divFilters .dropdownContent {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 10px;
+}
+main .addedTags .tag,
+main .divFilters .dropdownContent li:hover {
+  background-color: var(--primary-color);
+}
+main .divFilters .dropdown:hover > .dropdownContent {
+  display: block;
+  position: relative;
+  box-shadow: 0 10px 16px -6px rgba(0, 0, 0, 0.2);
+}
+main .divFilters #dropdownSearchAppliances,
+main .divFilters #dropdownSearchIngredients,
+main .divFilters #dropdownSearchUstensils {
+  margin: 0 15px;
+  width: 122px;
+  height: 36px;
+  border: 1px solid var(--light-grey);
+  position: relative;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+main .divFilters .fa-magnifying-glass {
+  color: var(--light-grey);
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+main .divFilters .dropdownContent ul {
+  padding: 15px 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 60vh;
+  width: 767px;
+  background-color: #fff;
+  overflow-y: auto;
+  box-shadow: 0 10px 16px -6px rgba(0, 0, 0, 0.2);
+  border-radius: 0 10px 10px;
+}
+main .divFilters .dropdownContent li {
+  padding: 8px 16px;
+  cursor: pointer;
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  width: 25%;
+  box-sizing: border-box;
+}
+@media (max-width: 1350px) {
+  main .divFilters .dropdownContent ul {
+    width: 511px;
+  }
+  main .divFilters .dropdownContent li {
+    width: 33%;
+  }
+}
+@media (max-width: 1130px) {
+  main .divFilters .dropdownContent ul {
+    width: 256px;
+  }
+  main .divFilters .dropdownContent li {
+    width: 50%;
+  }
+}
+@media (max-width: 870px) {
+  main .divFilters .dropdownContent li,
+  main .divFilters .dropdownContent ul {
+    width: 100%;
+  }
+}
+main .recipesNumber {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 45px;
+  position: relative;
+}
+main .addedTags {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: row;
+  margin-left: 70px;
+  top: 115px;
+  gap: 25px;
+  padding-left: 5px;
+}
+main .addedTags .tag {
+  border-radius: 10px;
+  padding: 17px;
+}
+main .addedTags .tag:after {
+  content: "\f00d";
+  display: inline-block;
+}
+main .recipeSection {
+  margin-left: auto;
+  margin-right: auto;
+  width: 93%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 80px;
+  padding-bottom: 60px;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  row-gap: 50px;
+  top: 150px;
+}
+@media (max-width: 1024px) {
+  main .divFilters {
+    flex-direction: column-reverse;
+  }
+  main .divFilters .dropdown {
+    bottom: 40px;
+  }
+  main .recipesNumber {
+    padding: 0;
+    margin: 20px 0 0;
+  }
+  main .addedTags {
+    top: 145px;
+    padding-left: 0;
+    margin-left: 45px;
+  }
+  main .recipeSection {
+    top: 180px;
+  }
+}
+main .recipeSection .errorMessage {
+  font-size: 22px;
+  margin-bottom: 40px;
+  width: 1440px;
+  text-align: center;
+}
+@media (max-width: 960px) {
+  main .recipeSection .errorMessage {
+    width: 90%;
+  }
+}
+@media (max-width: 630px) {
+  main .divFilters .divTags {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  main .divFilters .dropdown {
+    margin: 0;
+  }
+  main .addedTags {
+    top: 260px;
+  }
+  main .recipeSection {
+    top: 270px;
+  }
+  main .recipeSection .errorMessage {
+    margin-bottom: 100px;
+  }
+}
+main .recipeSection .articleRecipe {
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  height: 645px;
+  width: 380px;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 320px) and (max-width: 379px) {
+  main .recipeSection .articleRecipe {
+    width: 100vw;
+  }
+}
+@media (min-width: 380px) {
+  main .recipeSection .articleRecipe {
+    width: 380px;
+  }
+}
+main .articleRecipe img {
+  width: 380px;
+  height: 253px;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  margin-bottom: -20px;
+}
+main .articleRecipe .recipeDuration {
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  background-color: var(--primary-color);
+  bottom: 220px;
+  left: 300px;
+  height: 23px;
+  width: 65px;
+  border-radius: 14px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+}
+@media (min-width: 320px) and (max-width: 379px) {
+  main .articleRecipe .recipeDuration {
+    left: 77%;
+  }
+}
+main .articleRecipe .recipeName {
+  font-family: var(--primary-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0;
+  padding-left: 15px;
+}
+main .recipeSection .articleRecipe h3 {
+  font-family: var(--secondary-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark-grey);
+  margin-bottom: 10px;
+}
+main .articleRecipe .recipeDescription {
+  font-family: var(--secondary-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 15px 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 104px;
+  line-height: 1.2em;
+  margin-bottom: 0;
+}
+main .articleRecipe .recipeIngredients {
+  font-family: var(--secondary-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+main .articleRecipe .recipeIngredients h3 {
+  margin-bottom: -3px;
+}
+main .articleRecipe .recipeIngredients .recipeIngredientsItems {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+main .articleRecipe .recipeIngredients .recipeIngredientsName {
+  font-family: var(--secondary-font-family);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: -5px;
+  margin-top: -5px;
+}
+main .articleRecipe .recipeIngredients .recipeIngredientsQuantity {
+  font-family: var(--secondary-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-grey);
+}

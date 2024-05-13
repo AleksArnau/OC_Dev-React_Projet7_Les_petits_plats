@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="src/css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ee84ea85d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Les petits plats</title>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img
+          src="assets/icons/logo.png"
+          class="logo"
+          alt="Logo du site Les petits plats"
+          role="link"
+          aria-label="Homepage"
+        />
+      </a>
+      <h1 class="headerH1">
+        CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
+      </h1>
+      <div class="divHeaderInput">
+        <input
+          type="text"
+          class="inputHeader"
+          placeholder="Rechercher une recette, un ingrédient, ..."
+          id="searchInput"
+        />
+        <span class="fa-stack fa-2x buttonSearch" role="button" tabindex="0">
+          <span class="fa-solid fa-square fa-stack-2x"></span>
+          <span class="fa-solid fa-magnifying-glass fa-stack-1x"></span>
+        </span>
+      </div>
+    </header>
+    <main>
+      <div class="divFilters">
+        <div class="divTags">
+          <div id="dropdownIngredients" class="dropdown">
+            <button class="dropdownTitle">Ingrédients</button>
+            <div class="dropdownContent" id="dropdownContentIngredients">
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                id="dropdownSearchIngredients"
+              />
+              <span class="fa-solid fa-magnifying-glass"></span>
+              <ul id="ingredientsList">
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+                <li>Option 5</li>
+                <li>Option 6</li>
+                <li>Option 7</li>
+                <li>Option 8</li>
+                <li>Option 9</li>
+                <li>Option 10</li>
+              </ul>
+            </div>
+          </div>
+          <div id="dropdownAppliances" class="dropdown">
+            <button class="dropdownTitle">Appliances</button>
+            <div class="dropdownContent" id="dropdownContentAppliances">
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                id="dropdownSearchAppliances"
+              />
+              <span class="fa-solid fa-magnifying-glass"></span>
+              <ul id="appareilsList">
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+                <li>Option 5</li>
+                <li>Option 6</li>
+                <li>Option 7</li>
+                <li>Option 8</li>
+                <li>Option 9</li>
+                <li>Option 10</li>
+              </ul>
+            </div>
+          </div>
+          <div id="dropdownUstensils" class="dropdown">
+            <button class="dropdownTitle">Ustensils</button>
+            <div class="dropdownContent" id="dropdownContentUstensils">
+              <input
+                type="text"
+                placeholder="Rechercher ..."
+                id="dropdownSearchUstensils"
+              />
+              <span class="fa-solid fa-magnifying-glass"></span>
+              <ul id="liUstensils">
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+                <li>Option 5</li>
+                <li>Option 6</li>
+                <li>Option 7</li>
+                <li>Option 8</li>
+                <li>Option 9</li>
+                <li>Option 10</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="recipesNumber">X recettes</div>
+      </div>
+      <div class="addedTags"></div>
+      <section class="recipeSection" id="recipeSection"></section>
+    </main>
+    <script type="module" src="src/scripts/main.js"></script>
+  </body>
+</html>
