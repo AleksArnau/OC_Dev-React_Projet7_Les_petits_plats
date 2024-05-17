@@ -1,18 +1,11 @@
 import { recipeTemplate } from "./factory/recipeFactory.js";
+import { searchRecipes } from "./utils/search.js";
 
 // Fetches recipe data
 async function getRecipes() {
   return fetch("../../data/recipes.json")
     .then((res) => res.json())
     .catch(console.error);
-}
-
-// Enables search by filtering recipes
-function searchRecipes(recipes, searchTerm) {
-  searchTerm = searchTerm.toLowerCase();
-  return recipes.filter((recipe) =>
-    recipe.name.toLowerCase().includes(searchTerm)
-  );
 }
 
 // Displays recipes in the DOM
